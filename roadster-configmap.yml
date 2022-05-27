@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: roadsterConfigMap
+  labels:
+    env: development
+data:
+  origin-country: USA
+  city: New Jersey
+  age: 27
+  gender: Female
+  international-places: true    

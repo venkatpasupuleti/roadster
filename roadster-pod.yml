@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: roadsterpod
+  labels:
+    app: roadster
+    version: 1.0
+spec:
+  containers:
+    - name: roadster
+      image: techsriman/roadster:1.0
+      ports:
+        - name: http
+          containerPort: 8082
+          protocol: TCP
+      readinessProbe:
+        httpGet:
+          path: /actuator/health/readiness
+          port: 8082
+        initialDelaySeconds: 5
+        timeoutSeconds: 5
+        failureThreshold: 3
+      livenessProbe:
+        httpGet:
+          path: /actuator/health/liveness
+          port: 8082
+        initialDelaySeconds: 5
+        timeoutSeconds: 5
+        failureThreshold: 3    
+      resources:
+        requests:    
+          cpu: "500m"
+          memory: "512Mi"
+        limits:
+          cpu: "1000m"  
+          memory: "1024Mi"
+      env:
+        - name: originCountry
+          valueFrom:
+            configMapKeyRef:
+              name: roadsterConfigMap
+              key: origin-country
+        - name: city
+          valueFrom:
+            configMapKeyRef:
+              name: roadsterConfigMap
+              key: city
+        - name: age
+          valueFrom:
+            configMapKeyRef:
+              name: roadsterConfigMap
+              key: age
+        - name: gender
+          valueFrom:
+            configMapKeyRef:
+              name: roadsterConfigMap
+              key: gender
+        - name: internationalPlaces
+          valueFrom:
+            configMapKeyRef:
+              name: roadsterConfigMap
+              key: international-places      
