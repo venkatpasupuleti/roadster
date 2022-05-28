@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: roadster
-      image: techsriman/roadster:1.0
+      image: techsriman/roadster:2.0
       ports:
         - name: http
           containerPort: 8082
