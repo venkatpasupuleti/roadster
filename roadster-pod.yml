@@ -59,4 +59,16 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: roadsterconfigmap
-              key: international-places      
+              key: international-places   
+        volumeMounts:
+          - name: roadsterplacesvolume
+            mountPath: "/config"
+            readOnly: true       
+
+volumes:
+  - name: roadsterplacesvolume
+    configMap:
+      name: roadsterplacesconfigmap
+      items:
+        - key: places.properties              
+          path: "places.properties"

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: roadsterplacesconfigmap
+data:
+  places.properties |
+    hyderabad: madhapur
+    chennai: mahabalipuram
+    delhi: cogunaht place
+    pune: wakad
+    banglore: MGRoad  
