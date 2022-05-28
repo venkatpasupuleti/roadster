@@ -38,25 +38,25 @@ spec:
         - name: originCountry
           valueFrom:
             configMapKeyRef:
-              name: roadsterConfigMap
+              name: roadsterconfigmap
               key: origin-country
         - name: city
           valueFrom:
             configMapKeyRef:
-              name: roadsterConfigMap
+              name: roadsterconfigmap
               key: city
         - name: age
           valueFrom:
             configMapKeyRef:
-              name: roadsterConfigMap
+              name: roadsterconfigmap
               key: age
         - name: gender
           valueFrom:
             configMapKeyRef:
-              name: roadsterConfigMap
+              name: roadsterconfigmap
               key: gender
         - name: internationalPlaces
           valueFrom:
             configMapKeyRef:
-              name: roadsterConfigMap
+              name: roadsterconfigmap
               key: international-places      
