@@ -4,7 +4,7 @@ metadata:
   name: roadsterpod
   labels:
     app: roadster
-    version: 1.0
+    version: "1.0"
 spec:
   containers:
     - name: roadster
