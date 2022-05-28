@@ -10,7 +10,7 @@ RUN tar -xzvf openjdk-11.0.1_linux-x64_bin.tar.gz
 RUN tar -xzvf apache-tomcat-9.0.63.tar.gz
 RUN rm -rf apache-tomcat-9.0.63.tar.gz
 RUN rm -rf openjdk-11.0.1_linux-x64_bin.tar.gz
-COPY target/roadster-1.0.war apache-tomcat-9.0.63/webapps
+COPY target/roadster.war apache-tomcat-9.0.63/webapps
 COPY run.sh .
 RUN chmod u+x run.sh
 ENTRYPOINT [ "./run.sh" ]
