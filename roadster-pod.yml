@@ -15,15 +15,15 @@ spec:
           protocol: TCP
       readinessProbe:
         httpGet:
-          path: /roadster/actuator/health/readiness
-          port: 8080
+          path: /actuator/health/readiness
+          port: 8082
         initialDelaySeconds: 5
         timeoutSeconds: 5
         failureThreshold: 3
       livenessProbe:
         httpGet:
-          path: /roadster/actuator/health/liveness
-          port: 8080
+          path: /actuator/health/liveness
+          port: 8082
         initialDelaySeconds: 5
         timeoutSeconds: 5
         failureThreshold: 3    
