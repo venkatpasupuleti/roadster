@@ -9,4 +9,4 @@ data:
   city: New Jersey
   age: "27"
   gender: Female
-  international-places: true    
+  international-places: "true"
