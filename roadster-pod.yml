@@ -35,27 +35,27 @@ spec:
           cpu: "1000m"  
           memory: "1024Mi"
       env:
-        - name: originCountry
+        - name: preferences.originCountry
           valueFrom:
             configMapKeyRef:
               name: roadsterconfigmap
               key: origin-country
-        - name: city
+        - name: preferences.city
           valueFrom:
             configMapKeyRef:
               name: roadsterconfigmap
               key: city
-        - name: age
+        - name: preferences.age
           valueFrom:
             configMapKeyRef:
               name: roadsterconfigmap
               key: age
-        - name: gender
+        - name: preferences.gender
           valueFrom:
             configMapKeyRef:
               name: roadsterconfigmap
               key: gender
-        - name: internationalPlaces
+        - name: preferences.internationalPlaces
           valueFrom:
             configMapKeyRef:
               name: roadsterconfigmap

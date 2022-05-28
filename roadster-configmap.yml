@@ -5,9 +5,8 @@ metadata:
   labels:
     env: development
 data:
-  preferences:
-    origin-country: USA
-    city: New Jersey
-    age: "27"
-    gender: Female
-    international-places: "true"
+  origin-country: USA
+  city: New Jersey
+  age: "27"
+  gender: Female
+  international-places: "true"
