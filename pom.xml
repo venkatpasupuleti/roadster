@@ -8,10 +8,12 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
+		
 	</parent>
 	<groupId>roadster.com</groupId>
 	<artifactId>roadster</artifactId>
 	<version>1.0</version>
+	<packaging>war</packaging>
 	<name>roadster</name>
 	<description>exploring places</description>
 	<properties>
@@ -36,14 +38,14 @@
 			<scope>test</scope> </dependency> <dependency> <groupId>org.glassfish.web</groupId> 
 			<artifactId>jstl-impl</artifactId> <version>1.2</version> <scope>runtime</scope> 
 			</dependency> -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jsp-api</artifactId>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>
