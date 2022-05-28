@@ -63,7 +63,7 @@ spec:
         volumeMounts:
           - name: roadsterplacesvolume
             mountPath: "/config"
-            readOnly: true       
+            readOnly: "true"
 
 volumes:
   - name: roadsterplacesvolume
